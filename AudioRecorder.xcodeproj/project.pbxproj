@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C4A1D33A2461F64600182840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1D3392461F64600182840 /* AppDelegate.swift */; };
-		C4A1D33C2461F64600182840 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1D33B2461F64600182840 /* SceneDelegate.swift */; };
 		C4A1D33E2461F64600182840 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A1D33D2461F64600182840 /* ViewController.swift */; };
 		C4A1D3412461F64600182840 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A1D33F2461F64600182840 /* Main.storyboard */; };
 		C4A1D3432461F64800182840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A1D3422461F64800182840 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		C4A1D3362461F64600182840 /* AudioRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A1D3392461F64600182840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4A1D33B2461F64600182840 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C4A1D33D2461F64600182840 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4A1D3402461F64600182840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4A1D3422461F64800182840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				C4A1D3392461F64600182840 /* AppDelegate.swift */,
-				C4A1D33B2461F64600182840 /* SceneDelegate.swift */,
 				C4A1D33D2461F64600182840 /* ViewController.swift */,
 				C4A1D33F2461F64600182840 /* Main.storyboard */,
 				C4A1D3422461F64800182840 /* Assets.xcassets */,
@@ -140,7 +137,6 @@
 			files = (
 				C4A1D33E2461F64600182840 /* ViewController.swift in Sources */,
 				C4A1D33A2461F64600182840 /* AppDelegate.swift in Sources */,
-				C4A1D33C2461F64600182840 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +281,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FSX848FP3F;
 				INFOPLIST_FILE = AudioRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +300,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FSX848FP3F;
 				INFOPLIST_FILE = AudioRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
