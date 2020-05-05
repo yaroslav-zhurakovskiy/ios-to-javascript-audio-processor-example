@@ -44,11 +44,13 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
         let opaqueType = unsafeBitCast(logFunctionImplementation, to: AnyObject.self)
         jsContext.setObject(opaqueType, forKeyedSubscript: "__swift_log" as NSString)
         
+        // Declare console.log and processAudio
         jsContext.evaluateScript("""
             var console = {
                 log: function(data) { __swift_log(data); }
             };
 
+            // Prints each byte as a hex value
             function processAudio(bytes) {
                 var hexString = ""
                 for(var index = 0; index < bytes.length; index++) {
