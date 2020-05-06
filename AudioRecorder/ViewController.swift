@@ -54,7 +54,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             function processAudio(bytes) {
                 var hexString = ""
                 for(var index = 0; index < bytes.length; index++) {
-                    var byte = bytes[index];
+                    var byte = bytes.getByte(index);
                     hexString += "0x" + byte.toString(16);
                 }
                 console.log(hexString)
@@ -169,8 +169,8 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                 let audioFileContent = try Data(contentsOf: audioFileURL)
                 // Find processAudio js function
                 let processAudio = jsContext.objectForKeyedSubscript("processAudio")!
-                // Convert raw pointer to Swift Array
-                let byteArray = audioFileContent.withUnsafeBytes { pointer in Array(pointer) }
+                // Convert raw pointer to our ByteArray wrapper class
+                let byteArray = ByteArray(data: audioFileContent)
                 // Invoke js function with a byte array
                 processAudio.call(withArguments: [byteArray])
             } catch let error {
